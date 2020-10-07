@@ -2,8 +2,8 @@
 #include <math.h>
 
 void EXPLICA_PROGRAMA(){
-    printf("MANUELLA DA SILVA MARROQUIM DE OLIVEIRA");
-    printf("Matricula:12786536430 - F3");
+    printf("*********");
+    printf("Matricula:********* - F3");
     printf("O programa gera duas sequências distintas a partir de quatro variáveis, calcula a distância entre todos os valores de mesmo índice, faz a somatória dos valores de cada sequência e apresenta estes dados ao usuário que terá a opção de reiniciar o código sem precisar fechar e reabrí-lo");
 }
 int CALCULA_TERMO(int penultimoTermo, int antepenultimoTermo){
