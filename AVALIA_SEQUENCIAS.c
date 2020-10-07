@@ -13,9 +13,13 @@ int CALCULA_DIFERENCA(int termoDeU, int termoDeT){
     return abs(termoDeU - termoDeT);;
 }
 int main(){
-    int U0, U1, T0, T1, k=1, dAtual, dMax=0,dLimite=300000, repita, somaAcumuladaU=0, somaAcumuladaT=0, ultimoU, ultimoT, penultimoU, penultimoT, antepenultimoU=0, antepenultimoT=0, diferencaAcumuladas;
+    int U0, U1, T0, T1, k=1, dAtual, dMax=0,dLimite, repita, somaAcumuladaU=0, somaAcumuladaT=0, ultimoU, ultimoT, penultimoU, penultimoT, antepenultimoU=0, antepenultimoT=0, diferencaAcumuladas;
     char execute;
     do{
+        printf("Insira o valor que você deseja atribuir como a distância limite (mínimo: 1, máximo: 300.000)");
+        do{    
+            scanf("%d",&dLimite);
+        }while(dLimite<1 || dLimite>300000);
         do{
             printf("Digite o primeiro termo de U: ");
             scanf("%d",&U0);
