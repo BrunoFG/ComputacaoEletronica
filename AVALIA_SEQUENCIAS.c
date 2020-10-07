@@ -14,7 +14,7 @@ int CALCULA_DIFERENCA(int termoDeU, int termoDeT){
 }
 int main(){
     int U0, U1, T0, T1, k=1, dAtual, dMax=0,dLimite=300000, repita, somaAcumuladaU=0, somaAcumuladaT=0, ultimoU, ultimoT, penultimoU, penultimoT, antepenultimoU=0, antepenultimoT=0, diferencaAcumuladas;
-    char novaExecucao;
+    char execute;
     do{
         do{
             printf("Digite o primeiro termo de U: ");
@@ -51,19 +51,20 @@ int main(){
             somaAcumuladaU += ultimoU; // acrescenta o termo atual de U ao somatório dos termos de U
             somaAcumuladaT += ultimoT; // acrescenta o termo atual de T ao somatório dos termos de T
             diferencaAcumuladas = CALCULA_DIFERENCA(somaAcumuladaU, somaAcumuladaT); // calcula a diferença entre as somas acumuladas
+            printf("\nA distância entre U%d:%d e T%d:%d é: %d\n",k-1,ultimoU,k-1,ultimoT,dAtual);
+            printf("As somas acumuladas de U e de T até então são %d e %d, respectivamente\n", somaAcumuladaU, somaAcumuladaT);
+            printf("A diferença entre as somas acumuladas é: %d\n", diferencaAcumuladas);
             if (dAtual>dMax && dAtual<dLimite){
                 dMax = dAtual; // armazenamento da distância máxima
             }else{
                 break;
             }
             k++;
-            printf("A distância entre U%d:%d e T%d:%d é: %d\n",k-1,ultimoU,k-1,ultimoT,dAtual);
-            printf("A soma acumulada de U até então é: %d", somaAcumuladaU);
-            printf("A soma acumulada de T até então é: %d", somaAcumuladaT);
-            printf("A diferença entre as somas acumuladas é: %d", diferencaAcumuladas);
         }while(dLimite>=1);
-        printf("A distância máxima é: %d\n", dMax);
-        printf("deseja rodar o código novamente? Digite 'S' ou 's' para executar novamente\n");
-        scanf("%c",&novaExecucao);
-    }while(novaExecucao=='S' || novaExecucao == 's');
+        printf("A distância máxima é: %d\n\n", dMax);
+        printf("deseja rodar o código novamente? Digite 'N' ou 'n' para sair do programa\n");
+        scanf(" %c",&execute);
+        if(execute=='N' || execute=='n'){break;}
+    }while(execute!='N' || execute!='n');
+    printf("Programa finalizado!");
 }
