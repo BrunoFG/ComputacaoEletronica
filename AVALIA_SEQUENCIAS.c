@@ -2,9 +2,9 @@
 #include <math.h>
 
 void EXPLICA_PROGRAMA(){
-    printf("*********");
-    printf("Matricula:********* - F3");
-    printf("O programa gera duas sequências distintas a partir de quatro variáveis, calcula a distância entre todos os valores de mesmo índice, faz a somatória dos valores de cada sequência e apresenta estes dados ao usuário que terá a opção de reiniciar o código sem precisar fechar e reabrí-lo");
+    printf("*********\n");
+    printf("Matricula:********* - F3\n");
+    printf("O programa gera duas sequências distintas a partir de quatro variáveis, calcula a distância entre todos os valores de mesmo índice, faz a somatória dos valores de cada sequência e apresenta estes dados ao usuário que terá a opção de reiniciar o código sem precisar fechar e reabrí-lo\n\n");
 }
 int CALCULA_TERMO(int penultimoTermo, int antepenultimoTermo){
     return penultimoTermo + antepenultimoTermo;
@@ -15,6 +15,7 @@ int CALCULA_DIFERENCA(int termoDeU, int termoDeT){
 int main(){
     int U0, U1, T0, T1, k=1, dAtual, dMax=0,dLimite, repita, somaAcumuladaU=0, somaAcumuladaT=0, ultimoU, ultimoT, penultimoU, penultimoT, antepenultimoU=0, antepenultimoT=0, diferencaAcumuladas;
     char execute;
+    EXPLICA_PROGRAMA();
     do{
         printf("Insira o valor que você deseja atribuir como a distância limite (mínimo: 1, máximo: 300.000)");
         do{    
