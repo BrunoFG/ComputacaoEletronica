@@ -12,7 +12,7 @@ int CALCULA_TERMO(int Sn1, int Sn2){
 int CALCULA_DIFERENCA(int Un, int Tn){
     return abs(Un-Tn);
 }
-int IMPRIME_RESULTADOS(int indice, int Uatual, int Tatual, int somaU, int somaT){
+void IMPRIME_RESULTADOS(int indice, int Uatual, int Tatual, int somaU, int somaT){
     int difUT = CALCULA_DIFERENCA(Uatual, Tatual);
     int difAcumuladas = CALCULA_DIFERENCA(somaU, somaT);
     printf("índice:%d U:%d T:%d dUT:%d somaU:%d somaT:%d dSoma:%d\n", indice, Uatual, Tatual, difUT, somaU, somaT, difAcumuladas);
@@ -20,7 +20,7 @@ int IMPRIME_RESULTADOS(int indice, int Uatual, int Tatual, int somaU, int somaT)
 int main(){
     char resposta;
     while(resposta != 'n' || resposta != 'N'){
-        int Dk, Uk, Tk, U0, U1, T0, T1, Dmax=0, k=0, Uk1, Uk2=0, Tk1, Tk2=0, Uacumulada=0, Tacumulada=0, DifAcumuladas, Dlimite;
+        int Dk, Uk, Tk, U0, U1, T0, T1, Dmax=0, k=0, Uk1, Uk2=0, Tk1, Tk2=0, Uacumulada=0, Tacumulada=0, Dlimite;
         do{    
             printf("Digite a distância máxima: ");
             scanf("%d", &Dlimite);
