@@ -59,13 +59,11 @@ int main(){
             printf("\nA distância entre U%d:%d e T%d:%d é: %d\n",k-1,ultimoU,k-1,ultimoT,dAtual);
             printf("As somas acumuladas de U e de T até então são %d e %d, respectivamente\n", somaAcumuladaU, somaAcumuladaT);
             printf("A diferença entre as somas acumuladas é: %d\n", diferencaAcumuladas);
-            if (dAtual>dMax && dAtual<dLimite){
+            if (dAtual>dMax){
                 dMax = dAtual; // armazenamento da distância máxima
-            }else{
-                break;
             }
             k++;
-        }while(dLimite>=1);
+        }while(dAtual<dLimite);
         printf("A distância máxima é: %d\n\n", dMax);
         printf("deseja rodar o código novamente? Digite 'N' ou 'n' para sair do programa\n");
         scanf(" %c",&execute);
